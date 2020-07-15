@@ -1,17 +1,94 @@
-<ion-header [translucent]="true">
+<ion-header>
+  <!-- 通常横向的一条 都具有插槽 -->
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-img
+      slot="start"
+      src="../../assets/img/logo.jpg"
+    ></ion-img>
+    <ion-searchbar animated=true  placeholder="请输入商品名称"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content *ngIf="res">
+    <!--轮播图开始-->
+    <ion-slides pager [options]="{autoplay:{disableOnInteraction: false},loop:true}">
+      <ion-slide *ngFor="let item of res">
+        <img class="carousel-img" [src]=item.img />
+      </ion-slide>
+    </ion-slides>
+    <!--轮播图结束-->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <!--商品分类模块开始-->
+      <div class="row">
+            <div class="col">
+              <img src="../../assets/img/show/daopao.png" alt="">
+              <p>道袍</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/jiaoling.png" alt="">
+              <p>交领</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/liling.png" alt="">
+              <p>立领</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/qiyao.png" alt="">
+              <p>齐腰</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/qixiong.png" alt="">
+              <p>齐胸</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/doupeng.png" alt="">
+              <p>斗篷</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/neida.png" alt="">
+              <p>内搭</p>
+            </div>
+            <div class="col">
+              <img src="../../assets/img/show/shipin.png" alt="">
+              <p>饰品</p>
+            </div>
+      </div>
+    <!--商品分类模块结束-->   
+    <div class="main">
+    <!--今日抢购模块开始-->
+      <div class="hotsell">
+        <p>今日闪购</p>
+        <div class="showPic">
+          <div class="shop" *ngFor="let item of res1">
+            <img [src]=item.img alt="">
+            <p>¥{{(item.price).toFixed(2)}}</p>
+            <p class="delPrice"><del>¥{{(item.delPrice).toFixed(2)}}</del></p>
+          </div>         
+        </div>
+      </div>
+    <!--今日抢购模块结束-->
+    <div class="hotsell">
+      <p>精品萌卖</p>
+      <div class="showPic">
+        <div class="shop" *ngFor="let item of res2">
+          <img [src]=item.pic alt="">
+          <p>¥{{(item.price).toFixed(2)}}</p>
+        </div>         
+      </div>
+    </div>
+    <!--首页商品数据 开始-->
+    <div class="product">    
+    <ion-grid fixed *ngIf="res">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of res2">
+          <ion-img [src]="item.pic"></ion-img>
+          <p class="price">¥{{(item.price).toFixed(2)}}</p>
+          <p class="title">{{item.title}}</p>
+          <p class="saleCount">{{item.saleCount}}条评价</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+    <!--首页商品数据 结束-->
+    </div>
 </ion-content>

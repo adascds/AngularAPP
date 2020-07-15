@@ -1,0 +1,67 @@
+
+ion-toolbar{
+    height: 40px;
+    border:1px solid white;
+}
+ion-icon{
+    color: #FF93dc;
+    font-size: 20px;
+    margin-right: 10px;
+}
+ion-title{
+    color: #FF93dc;
+}
+.topPic{
+    width:96%;
+    margin: 5px auto;
+}
+.topPic>img{
+    width: 100%;
+    border-radius: 15px;
+}
+ion-col>img{
+    display: block;
+    border-radius: 50%;
+    width:70%;
+    margin: 0 auto;
+}
+ion-col>p{
+    margin: 0;
+    text-align: center;
+    font-family: 仿宋;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+.cstyle{
+   box-shadow:5px 5px 5px 1px rgb(229, 229, 240); ;
+}
+.content>p{
+    color: #FF93dc;
+    text-align: center;
+}
+.content{
+    border-radius: 15px;
+}
+ion-card-title{
+    height: 50px;
+    display: flex;
+
+}
+ion-card-title>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(231, 220, 220);
+}
+ion-card-title>span{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color:#5f5656;
+    letter-spacing:1px;
+    margin-left:15px ;
+    margin-top: 15px;
+}
+
+

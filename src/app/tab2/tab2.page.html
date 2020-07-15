@@ -1,17 +1,84 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      倾城云社区
     </ion-title>
+        <ion-icon name="add-circle-outline" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!--顶部宣传图片 开始-->  
+  <div class="topPic">
+      <img src="../../assets/img/carousel/QQ截图20200714095425.png" alt="">
+  </div>
+  <!--顶部宣传图片 结束--> 
+  
+  <!--分类 开始-->
+  <div class="cstyle">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo1.jpg" alt="">
+          <p>汉服摄影</p>
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo2.jpg" alt="">
+          <p>汉服研习</p>
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo3.jpg" alt="">
+          <p>问答专区</p>
+        </ion-col>
+        <ion-col size="3">
+           <img src="../../assets/img/show/demo4.jpg" alt="">
+          <p>发型妆容</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo5.jpg" alt="">
+          <p>汉服宝箱</p>
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo6.jpg" alt="">
+          <p>汉服设计</p>
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo7.jpg" alt="">
+          <p>汉服安利</p>
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/img/show/demo8.jpg" alt="">
+          <p>汉服穿搭</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!--分类 结束-->
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!--评论 开始-->
+  <div class="content">
+    <p>最新动态</p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <img src="../../assets/img/hotSell/5c7b9f9d0a21c237.jpg"/>
+          <span>绮梦千年</span>
+        </ion-card-title>
+        <ion-card-subtitle>发布时间:2020-07-14 18:06</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        墙角慢慢转出一袭淡紫色身影。光亮华丽的贡品柔缎，不仅仅是在阳光下折射出淡淡光辉那样好看，穿在身上亦是舒适飘逸，形态优美极了。那人高高绾着冠发，长若流水的发丝服帖顺在背后，微仰着头，背抵在黝黑的墙壁间，微微一笑——不分性别的美丽，如此惊心动魄的魅惑
+      </ion-card-content>
+      <ion-img src="../../assets/img/hotSell/5c7b9f9d0a21c237.jpg"
+    ></ion-img>
+    </ion-card>
+  
+  </div>
+
+
+
+  <!--评论 结束-->
+
 </ion-content>
